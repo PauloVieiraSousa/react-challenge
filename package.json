@@ -1,0 +1,42 @@
+{
+  "name": "react-challenge",
+  "version": "0.0.1",
+  "description": "Reack Challenge",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "expect": "^23.6.0",
+    "jsdom": "^12.2.0",
+    "mocha": "^5.2.0",
+    "mocha-jsdom": "^2.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:develop": "webpack --config webpack.config.js",
+    "server": "node server.js",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloVieiraSousa/react-challenge.git"
+  },
+  "author": "Paulo Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauloVieiraSousa/react-challenge/issues"
+  },
+  "homepage": "https://github.com/PauloVieiraSousa/react-challenge#readme"
+}
