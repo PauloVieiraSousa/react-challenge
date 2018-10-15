@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: "development",
-    entry: './app/App.js',
+    entry: './app/index.js',
     devtool: 'inline-source-map',
     devServer:{
         inline: true,
@@ -17,8 +17,15 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
+                include: [path.resolve(__dirname, 'app')],
                 exclude: /node_modules/,
-                loader: 'babel-loader'  
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        babelrc: false,
+                        presets: ['@babel/env', "@babel/preset-react"]
+                    }
+                }]
             }            
         ],
     }
