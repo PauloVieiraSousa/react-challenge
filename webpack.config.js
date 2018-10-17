@@ -13,7 +13,6 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
         publicPath: '/'
     },
-    transformIgnorePatterns: "/node_modules/",
     module: {
         rules: [
             {
