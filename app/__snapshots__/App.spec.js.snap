@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`example test with jest 1`] = `
-<h1>
-  Exemplo App
-</h1>
-`;

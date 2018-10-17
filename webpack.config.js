@@ -18,13 +18,15 @@ module.exports = {
             {
                 test: /\.js$/,
                 include: [path.resolve(__dirname, 'app')],
-                exclude: [/node_modules/, /\.(e2e|spec)\.ts$/],
+                exclude: /node_modules/,
                 use: [{
                     loader: 'babel-loader',
                     options: {
                         babelrc: false,
                         presets: ['@babel/env', "@babel/preset-react"],
-                        plugins: ["transform-es2015-modules-commonjs"]
+                        plugins: [ 
+                                ["babel-plugin-styled-components", {"transpileTemplateLiterals": false}]
+                        ]
                     }
                 }]
             }            
