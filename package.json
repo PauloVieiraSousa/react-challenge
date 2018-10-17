@@ -4,11 +4,14 @@
   "description": "Reack Challenge",
   "main": "index.js",
   "dependencies": {
+    "babel-core": "^7.0.0-bridge.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
@@ -19,7 +22,7 @@
     "expect": "^23.6.0",
     "jest": "^23.6.0",
     "jsdom": "^12.2.0",
-    "react-test-renderer": "^16.5.2",
+    "react-test-renderer": "15.6.2",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
@@ -29,6 +32,12 @@
     "build:develop": "webpack --config webpack.config.js",
     "server": "node server.js",
     "start": "webpack-dev-server --open"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
